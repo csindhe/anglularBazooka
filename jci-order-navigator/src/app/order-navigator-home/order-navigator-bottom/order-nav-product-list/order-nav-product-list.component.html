@@ -1,0 +1,9 @@
+<div class="productListContainer">
+  <h2>Available Products</h2>
+  <div class="productContainer" *ngFor="let product of productList">
+    <a routerLink="/product/{{product.id}}">
+      <div class="productName"><strong>{{product.name}}</strong> </div>
+      <div class="productCost"><strong>Rating: {{product.stars}}</strong></div>
+    </a>
+  </div>
+</div>

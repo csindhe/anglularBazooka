@@ -1,0 +1,10 @@
+<div class="productListContainer">
+  <h2>{{currentProduct.Name}} Product Detail</h2>
+  <div class="productContainer">
+    <div class="productId"><strong>Product Id:</strong> {{currentProduct.id}}</div>
+    <div class="productName"><strong>Product Name:</strong> {{currentProduct.name}}</div>
+    <div class="productCost"><strong>Product Cost:</strong> {{currentProduct.cost}}</div>
+    <div class="productDesc"><strong>Product Description:</strong> {{currentProduct.description}}</div>
+  </div>
+</div>
+<jci-order-nav-related-products [currentProductId]="{{currentProduct.id}}"></jci-order-nav-related-products>

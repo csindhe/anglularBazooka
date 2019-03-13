@@ -1,0 +1,8 @@
+<div class="searchContainer col-12">
+  <div class="searchInput col-10">
+    <input #searchInput type="text" class="col-12" [(ngModel)]="searchString" placeholder="Enter product name to search...">
+  </div>
+  <div class="searchBtn col-2">
+    <input type="button" value="Search" class="col-12" (click)="triggerSearch(searchString); searchInput.value = ''">
+  </div>
+</div>
