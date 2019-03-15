@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { relatedProduct } from 'src/app/order-navigator-db/dataModels/relatedProductModel';
-import { RetrieveProductListService } from 'src/app/order-navigator-services/retrieve-product-list.service';
 import { take, mergeMap } from 'rxjs/operators';
 import { product } from 'src/app/order-navigator-db/dataModels/productModel';
+import { RetreiveRelatedProductService } from 'src/app/order-navigator-services/retreive-related-product.service';
+import { Router } from '@angular/router/src/router';
 
 @Component({
   selector: 'jci-order-nav-related-products',
@@ -12,22 +13,14 @@ import { product } from 'src/app/order-navigator-db/dataModels/productModel';
 export class OrderNavRelatedProductsComponent implements OnInit {
   @Input() currentProductId : number | string;
   relatedProduct: relatedProduct;
+  productsList: product[] = [];
 
-  constructor(private productService: RetrieveProductListService) { }
-
-  ngOnInit() {
-    
+  constructor(private relatedProdService: RetreiveRelatedProductService) { 
+    this.relatedProdService.productsList$.subscribe(products => this.productsList = products);
   }
 
-  fetchRelatedProducts() : relatedProduct {
-    this.productService.getRelatedProduct(this.currentProductId).pipe(
-      take(1),
-      mergeMap(product => {
-        if(product) {
-          return 
-        }
-      })
-    );
+  ngOnInit() {
+    this.relatedProdService.productsList$.subscribe(products => this.productsList = products);
   }
 
 }

@@ -1,8 +1,18 @@
 <div class="topContainer col-12">
-  <div class="col-2">
-    <img class="navigatorLogo" src="assets/images/navigatorlogo.png" alt="order navigator">
+  <div class="col-12 topContainerA">
+    <div class="col-2">
+      <img class="navigatorLogo" src="assets/images/navigatorlogo.png" alt="order navigator">
+    </div>
+    <div class="col-6">
+      <jci-order-navigator-search></jci-order-navigator-search>
+    </div>
   </div>
-  <div class="col-6">
-    <jci-order-navigator-search></jci-order-navigator-search>
+  <div class="col-12 topContainer" *ngIf="isProducts">
+    <a routerLink="/products">
+      Check our Available Products
+    </a>
+  </div>
+  <div class="col-12 topContainer">
+    <jci-breadcrumb></jci-breadcrumb>
   </div>
 </div>

@@ -1,3 +1,9 @@
-<p>
-  order-nav-related-products works!
-</p>
+<div class="productListContainer" *ngIf="productsList.length > 0">
+  <h2>Related Products</h2>
+  <div class="productContainer" *ngFor="let product of productsList">
+    <a routerLink="/product/{{product.id}}">
+      <div class="productName"><strong>{{product.name}}</strong> </div>
+      <div class="productCost"><strong>Rating: {{product.stars}}</strong></div>
+    </a>
+  </div>
+</div>

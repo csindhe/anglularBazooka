@@ -1,0 +1,11 @@
+.breadContainer {
+    display: flex;
+    flex-basis: auto;
+    flex-wrap: wrap;
+}
+.crumb::after {
+    content: " >> ";
+}
+.homeCrumb::after {
+    content: ":";
+}

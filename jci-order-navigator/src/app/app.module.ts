@@ -12,6 +12,7 @@ import { OrderNavProductListComponent } from './order-navigator-home/order-navig
 import { OrderNavProductDetailComponent } from './order-navigator-home/order-navigator-bottom/order-nav-product-detail/order-nav-product-detail.component';
 import { OrderNavRelatedProductsComponent } from './order-navigator-home/order-navigator-bottom/order-nav-product-detail/order-nav-related-products/order-nav-related-products.component';
 import { OrderNavProductHomeComponent } from './order-navigator-home/order-navigator-bottom/order-nav-product-home/order-nav-product-home.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { OrderNavProductHomeComponent } from './order-navigator-home/order-navig
     OrderNavProductListComponent,
     OrderNavProductDetailComponent,
     OrderNavRelatedProductsComponent,
-    OrderNavProductHomeComponent
+    OrderNavProductHomeComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

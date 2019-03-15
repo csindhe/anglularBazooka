@@ -28,7 +28,7 @@ export class RetrieveProductListService {
 
   getRelatedProduct(parentProductId: number | string): Observable<relatedProduct> {
     return this.getRelatedProductList().pipe(
-      map(products => products.find(product => product.parentId === parentProductId))
+      map(products => products.find(product => product.parentId === +parentProductId))
     );
   }
 
