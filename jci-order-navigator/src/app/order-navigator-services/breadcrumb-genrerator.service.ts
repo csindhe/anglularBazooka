@@ -11,7 +11,7 @@ import { breadcrumb } from 'src/app/order-navigator-db/dataModels/breadcrumbMode
 })
 export class BreadcrumbGenreratorService {
   displayAvailableProducts$ = new BehaviorSubject<boolean>(false);
-  breadcrumb$ = new Subject<breadcrumb[]>();
+  breadcrumb$ = new Subject<breadcrumb>();
   breadcrumbVal: breadcrumb = {};
 
   constructor(private router: Router) { }
